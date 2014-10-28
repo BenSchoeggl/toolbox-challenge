@@ -42,6 +42,13 @@ $(document).ready(function() {
         });
         gameBoard.append(row);
 
+        var seconds = Date.now();
+        window.setInterval(function() {
+            var elapsedSeconds = (Date.now() - seconds) / 1000;
+            elapsedSeconds = Math.floor(elapsedSeconds);
+            $('#elapsed-seconds').text(elapsedSeconds + ' seconds');
+        }, 1000);
+
         $('#gameBoard img').click(function() {
             var clickedImg = $(this);
             var tile = clickedImg.data('tile');
