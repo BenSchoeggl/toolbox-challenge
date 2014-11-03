@@ -4,3 +4,7 @@
     padding: 5px;
     box-sizing: border-box;
 }
+
+#gameIngo p {
+    display: none;
+}
